@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #ccc; */
+}
+
+body > div {
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+    z-index: 99;
+}
+
+.btn--success {
+    background-color: #71be34;
+}
+
+.btn--danger {
+    background-color: #ff623d;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999;
+}
+
+.toast {
+    display: flex;
+    border-radius: 2px;
+    background-color: #fff;
+    align-items: center;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-left: 4px solid;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    transition: all linear .3s ;
+}
+
+@keyframes supriceOnRight{
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.toast--success {
+    border-color: #6eff00;
+    flex-direction: row;
+}
+.toast--success .toast__icon {
+    color: #6eff00;
+}
+
+.toast--info {
+    border-color: #00a1ff;
+}
+.toast--info .toast__icon {
+    color: #00a1ff;
+}
+
+.toast--warning {
+    border-color: #ffe500;
+}
+.toast--warning .toast__icon {
+    color: #ffe500;
+}
+
+.toast--error {
+    border-color: #ff004c;
+}
+.toast--error .toast__icon {
+    color: #ff004c;
+}
+
+.toast + .toast {
+    margin-top: 24px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__body {
+    margin: 20px;
+    flex-grow: 1;
+}
+
+.toast__heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__desc {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.toast__close {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    color: #000;
+    transition: all 0.4s ease-in;
+}
+
+
+
