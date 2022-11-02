@@ -13,6 +13,8 @@
     <div>
         <div onclick="showSuccessToast()"class="btn btn--success">Show success toast</div>
         <div onclick="showErrorToast()"class="btn btn--danger">Show error toast</div>
+        <div onclick="showInfoToast()"class="btn btn--info">Show info toast</div>
+        <div onclick="showWarningToast()"class="btn btn--warning">Show warning toast</div>
     </div>
 
     <script>
@@ -71,7 +73,7 @@
                 heading: 'Success',
                 desc: 'Thành công',
                 type: 'success',
-                duration: 5000
+                duration: 3000
         })
         }
         function showErrorToast() {
@@ -79,8 +81,24 @@
                 heading: 'Error',
                 desc: 'Thất bại',
                 type: 'error',
-                duration: 5000
+                duration: 3000
         })
+        }
+        function showInfoToast() {
+            toast({
+                heading: 'Info',
+                desc: 'Thông tin',
+                type: 'info',
+                duration: 3000
+            })
+        }
+        function showWarningToast() {
+            toast({
+                heading: 'Warning',
+                desc: 'Cảnh báo',
+                type: 'warning',
+                duration: 3000
+            })
         }
     </script>
 </body>

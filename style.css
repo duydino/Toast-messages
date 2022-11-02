@@ -37,9 +37,16 @@ body > div {
 .btn--danger {
     background-color: #ff623d;
 }
+.btn--info {
+    background-color: #00a1ff;
+}
+.btn--warning {
+    background-color: #ffe500;
+}
 
 .btn:hover {
-    opacity: 0.5;
+    opacity: 0.8;
+    color: #000;
 }
 
 #toast {
